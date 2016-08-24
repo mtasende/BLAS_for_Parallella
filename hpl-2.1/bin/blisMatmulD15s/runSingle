@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mpiexec -f hostSingle -n 1 ./xhpl

@@ -1,0 +1,69 @@
+================================================================================
+HPLinpack 2.1  --  High-Performance Linpack benchmark  --   October 26, 2012
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :    4608 
+NB     :     768 
+PMAP   : Row-major process mapping
+P      :       3 
+Q      :       2 
+PFACT  :   Crout 
+NBMIN  :     256 
+NDIV   :       4 
+RFACT  :    Left 
+BCAST  :   1ring 
+DEPTH  :       0 
+SWAP   : Mix (threshold = 64)
+L1     : transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WR00L4C256        4608   768     3     2              66.59              9.800e-01
+HPL_pdgesv() start time Mon Apr  4 20:59:28 2016
+
+HPL_pdgesv() end time   Mon Apr  4 21:00:34 2016
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)= 13496836634.2041683 ...... FAILED
+||Ax-b||_oo  . . . . . . . . . . . . . . . . . = 3843702823400.875000
+||A||_oo . . . . . . . . . . . . . . . . . . . =        1191.425775
+||A||_1  . . . . . . . . . . . . . . . . . . . =        1186.981704
+||x||_oo . . . . . . . . . . . . . . . . . . . = 467227202593.453491
+||x||_1  . . . . . . . . . . . . . . . . . . . = 135845746912523.281250
+||b||_oo . . . . . . . . . . . . . . . . . . . =           0.499974
+================================================================================
+
+Finished      1 tests with the following results:
+              0 tests completed and passed residual checks,
+              1 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================

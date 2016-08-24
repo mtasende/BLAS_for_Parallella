@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="MatmulD15s" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Matmul1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Matmul1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Untitled1" />
+		<Unit filename="bli_gemm_opt_mxn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bli_gemm_opt_mxn_D.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bli_gemm_opt_mxn_debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bli_gemm_opt_mxn_debug.h" />
+		<Unit filename="bli_gemm_opt_mxn_noInit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common.h" />
+		<Unit filename="device.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.h" />
+		<Unit filename="mainD.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mainDDouble.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="matmul_assembly_rowcol.S" />
+		<Unit filename="matmul_assembly_rowcol1.S" />
+		<Unit filename="matmul_assembly_rowcol190x4_4.S" />
+		<Unit filename="matmul_assembly_rowcol240_2.S" />
+		<Unit filename="matmul_assembly_rowcol240x4_2.S" />
+		<Unit filename="matmul_assembly_rowcol4.S" />
+		<Unit filename="shmbuf.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

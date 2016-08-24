@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#cp -v common.h bli_gemm_opt_mxn.c ~/linpack/blis-master/config/matmulTestHPL/kernels/3/
+
+rsync -av shmbuf.h common.h bli_gemm_opt_mxn.c ../blis-master/config/matmulD15s/kernels/3/
