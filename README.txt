@@ -39,13 +39,15 @@ Wait until a message appears (in Spanish; may translate it later): "Esperando pe
 $1> cd MatmulD15s
 $1> ./runD.sh
 
-This will send the data to the process that was initiated before, it will send it to the Epiphany, and after all the calculations, send it back.
+This will send the data to the process that was initiated before, it will send it to the Epiphany, 
+and after all the calculations, send it back.
 
 .................................
 2) BLAS (or BLIS)
 
 i) Running the BLIS tests
-Before running the BLIS tests it is necessary to initiate the secondary process (which will be called by the kernel). Remember to wait for the "Esperando pedido de cálculo..." message ("ready" message).
+Before running the BLIS tests it is necessary to initiate the secondary process (which will be called by the kernel). 
+Remember to wait for the "Esperando pedido de cálculo..." message ("ready" message).
 In a second terminal ($2) run:
 $2> cd ProcMatmul
 $2> ./run.sh
@@ -64,7 +66,8 @@ You can add the generated BLAS library to your linker script in one of you progr
 
 You may also want to use some of the header files in the ./blisMatmulD15s/include/blis
 
-Remember that before actually using the BLIS sgemm or dgemm functions (that are Epiphany accelerated) it is necessary to initiate the secondary process. Remember to wait for the "Esperando pedido de cálculo..." message ("ready" message).
+Remember that before actually using the BLIS sgemm or dgemm functions (that are Epiphany accelerated) it is necessary to initiate the secondary process. 
+Remember to wait for the "Esperando pedido de cálculo..." message ("ready" message).
 In a second terminal ($2) run:
 
 $2> cd ProcMatmul
