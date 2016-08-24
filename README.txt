@@ -64,6 +64,13 @@ You can add the generated BLAS library to your linker script in one of you progr
 
 You may also want to use some of the header files in the ./blisMatmulD15s/include/blis
 
+Remember that before actually using the BLIS sgemm or dgemm functions (that are Epiphany accelerated) it is necessary to initiate the secondary process. Remember to wait for the "Esperando pedido de cálculo..." message ("ready" message).
+In a second terminal ($2) run:
+
+$2> cd ProcMatmul
+
+$2> ./run.sh
+
 
 iii) Compiling the BLAS (BLIS) library
 To compile the BLAS library with BLIS please first read the BLIS documentation.
