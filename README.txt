@@ -7,6 +7,9 @@ A Single Precision BLAS Library for Parallella, with Epiphany acceleration. Gene
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 
+To better understand the code you could read the paper for this work, here: https://arxiv.org/abs/1608.05265
+
+
 ---------- BUILDING AND RUNNING ---------------------------------------------
 
 First copy this folder (BLASv1) into your Parallella host.
